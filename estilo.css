@@ -1,0 +1,39 @@
+/* Pagina */
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height: 100vh;
+
+}
+
+/* Header */
+
+header{
+
+    background: linear-gradient(#003366,#006699);
+}
+
+/* Fim Header */
+
+
+
+/* Main */
+
+main{
+
+    background: linear-gradient(rgb(231, 236, 247), #eee);
+    height: 100%;
+}
+
+/* Fim Main */
+
+/* Footer */
+
+footer{
+
+    background-color: #003366;
+    margin-top: auto;
+}
