@@ -16,10 +16,11 @@
     <header>
 
         <div id="logo">
+            <img src="./imagens/logo.png" alt="Logo SGCM">
             <span>SGCM</span>
         </div>
 
-        <div id="usuarioinfo">
+        <div id="usuarioInfo">
             <span>Usuário: Admnistrador (Admin)</span>
             <span>Papel: ADMIN</span>
             <button type="button">Logout</button>
@@ -42,12 +43,14 @@
     </nav>
     <main>
 
-        <div>
-            ERRO!
+        <div class="alerta erro">
+            <span>&times;</span>
+            ERRO! Erro no servidor
         </div>
-        <div>
+        <!-- <div class="alerta sucesso">
+            <span>&times;</span>
             SUCESSO!
-        </div>
+        </div> -->
 
         <form action="#" method="get">
 
@@ -77,8 +80,10 @@
 
         <div id="comandos">
             <button type="button">Adicionar</button>
-            <label for="busca">Buscar</label>
-            <input type="text" name="busca" id="busca" placeholder="Pesquisar">
+            <div >
+                <label for="busca">Buscar</label>
+                <input type="text" name="busca" id="busca" placeholder="Pesquisar">
+            </div>
         </div>
         <table>
             
