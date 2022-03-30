@@ -5,9 +5,9 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>SGCM</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css'href='estilo.css'>
-   
+    <meta name='viewport' content='width=device-width, user-scalable=no'>
+    <link rel='stylesheet' type='text/css' href='estilo.css'>
+    
 
 </head>
 
@@ -36,9 +36,19 @@
             <li><a href="pacientes.html">Pacientes</a></li>
             <li><a href="profissionais.html">Profissionais</a></li>
             <li><a href="convenios.html">Convenios</a></li>
-            <li><a href="unidades.html">Unidades</a></li>
-            <li><a href="especialdiades.html">Especialdiades</a></li>
-            <li><a href="usuarios.html">Usuarios</a></li>
+
+            <li id="dropdown">
+                <a href="javascript:void(0)">
+                    Configurações
+                    <i>&#9660;</i>
+                </a>
+                <div id="dropdown_conteudo">
+
+                    <a href="unidades.html">Unidades</a>
+                    <a href="especialdiades.html">Especialdiades</a>
+                    <a href="usuarios.html">Usuarios</a>
+                </div>
+            </li>
         </ul>
     </nav>
     <main>
@@ -47,49 +57,54 @@
             <span>&times;</span>
             ERRO! Erro no servidor
         </div>
-        <!-- <div class="alerta sucesso">
+        <div class="alerta sucesso">
             <span>&times;</span>
             SUCESSO!
-        </div> -->
+        </div>
 
         <form action="#" method="get">
 
-            <input type="hidden" name="id">
-            
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nomeCompleto">
-            
-            <label for="nomeUsuario">Usuário</label>
-            <input type="text" id="nomeUsuario" name="nomeUsuario" required>
-            
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha">
-            
-            <label for="ativo">Ativo</label>
-            <input type="checkbox" name="ativo" id="ativo">
-            
-            <label for="papel">Papel</label>
-            <select name="papel" id="papel" required>
-                <option value=""></option>
-                <option value="USUARIO" >USUÁRIO</option>
-                <option value="ADMIN">ADMIN</option>
-            </select>
+            <div class="grid">
+                <input type="hidden" name="id">
 
-            <input type="submit" value="Enviar">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nomeCompleto">
+
+                <label for="nomeUsuario">Usuário</label>
+                <input type="text" id="nomeUsuario" name="nomeUsuario" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+
+                <label for="ativo">Ativo</label>
+                <input type="checkbox" name="ativo" id="ativo">
+
+                <label for="papel">Papel</label>
+                <select name="papel" id="papel" required>
+                    <option value=""></option>
+                    <option value="USUARIO">USUÁRIO</option>
+                    <option value="ADMIN">ADMIN</option>
+                </select>
+
+
+
+            </div>
+            <input type="button" value="Cancelar">
+            <input type="submit" value="Enviar" disabled>
         </form>
 
         <div id="comandos">
             <button type="button">Adicionar</button>
-            <div >
+            <div>
                 <label for="busca">Buscar</label>
                 <input type="text" name="busca" id="busca" placeholder="Pesquisar">
             </div>
         </div>
         <table>
-            
+
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th class="fit">ID</th>
                     <th>Nome:</th>
                     <th>Usuário</th>
                     <th>Ativo</th>
@@ -99,36 +114,36 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td class="fit">1</td>
                     <td>Administrador</td>
                     <td>admin</td>
                     <td>Sim</td>
                     <td>ADMIN</td>
                     <td>
                         <button type="button">Editar</button>
-                        <button type="button">Excluir</button>
+                        <button type="button" class="excluir" disabled>Excluir</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td class="fit">2</td>
                     <td>Leandro</td>
                     <td>Leandro</td>
                     <td>Sim</td>
                     <td>USUARIO</td>
                     <td>
                         <button type="button">Editar</button>
-                        <button type="button">Excluir</button>
+                        <button type="button" class="excluir">Excluir</button>
                     </td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td class="fit">3</td>
                     <td>Paulo</td>
                     <td>paulo</td>
                     <td>Não</td>
                     <td>USUARIO</td>
                     <td>
                         <button type="button">Editar</button>
-                        <button type="button">Excluir</button>
+                        <button type="button" class="excluir">Excluir</button>
                     </td>
                 </tr>
             </tbody>
